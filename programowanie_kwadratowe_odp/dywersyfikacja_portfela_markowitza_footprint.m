@@ -8,8 +8,8 @@ Cov = [0.1,  0.02, 0.04;
        0.04, 0.06, 0.15];
 
 %% 1. DEFINICJA FUNKCJI CELU
-% Funkcja celu w quadprog to: min 0.5 * x' * H * x + f' * x
-% W modelu Markowitza minimalizujemy wariancję portfela: x' * Cov * x
+% Funkcja celu w quadprog to: min 0.5 * x^(T) * H * x + f^(T) * x
+% W modelu Markowitza minimalizujemy wariancję portfela: x^(T) * Cov * x
 
 % ZADANIE 1: Zdefiniuj macierz H oraz wektor f.
 % Uwaga: Skoro we wzorze jest 0.5, a my chcemy zminimalizować całą wariancję...

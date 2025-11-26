@@ -1,3 +1,11 @@
+% Zastosowanie praktyczne – Dywersyfikacja portfela (Markowitz)
+% To klasyczne zadanie dla QP. Jest ciekawsze niż abstrakcyjne "iksy".
+% Treść: Jesteś inwestorem. Masz 3 spółki do wyboru.
+% Oczekiwane zwroty (wektor r): Spółka A: 10%, B: 20%, C: 15%.
+% Ryzyko (macierz kowariancji H): Podana w kodzie.
+% Cel: Zminimalizuj ryzyko portfela (1/2*​(x^T)*H*x) przy założeniu, że oczekiwany zysk z całego portfela wyniesie co najmniej 15%.
+% Warunki: Suma udziałów musi wynosić 1 (100% kapitału), udziały nie mogą być ujemne (brak krótkiej sprzedaży).
+
 %% DANE WEJŚCIOWE
 % Oczekiwane zwroty dla spółek A, B, C
 r = [0.10; 0.20; 0.15]; 
@@ -48,7 +56,7 @@ x0 = [0; 0; 0];
 disp('Rozpoczynam optymalizację...');
 
 % Odkomentuj poniższą linię i uzupełnij brakujące argumenty
-% [x, fval, exitflag] = quadprog(H, f, A, b, Aeq, beq, lb, ub, x0, options);
+[x, fval, exitflag] = quadprog(H, f, A, b, Aeq, beq, lb, ub, x0, options);
 
 %% 4. WYNIKI
 if exist('x', 'var')
